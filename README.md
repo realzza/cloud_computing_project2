@@ -7,3 +7,6 @@
 - [x] attempt to extract vectors from data
 - [x] refer to the tutorial, run the train baseline
 - [x] train a model on local device
+- [x] build flask server
+- [ ] create the docker stuff
+- [ ] run the docker successfully
