@@ -21,7 +21,7 @@ def ValuePredictor(to_predict_list):
  
 app = Flask(__name__)
 
-@app.route('/', methods = ['GET','POST'])
+@app.route('/api/american', methods = ['GET','POST'])
 def result():
     if request.method == 'POST':
         request_dict = request.get_json()
@@ -34,14 +34,4 @@ def result():
     
     else:
         return "fuck you"
-        # to_predict_list = request.form.to_dict()
-        # print(to_predict_list)
-        # to_predict_list = list(to_predict_list.values())
-        # to_predict_list = list(map(int, to_predict_list))
-        # result = ValuePredictor(to_predict_list)       
-        # if int(result)== 1:
-        #     prediction ='Income more than 50K'
-        # else:
-        #     prediction ='Income less that 50K'           
-        # return render_template("result.html", prediction = prediction)
         
