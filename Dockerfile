@@ -1,11 +1,18 @@
-FROM python
+FROM python:3.7-slim
 
-WORKDIR /home/zz188/cc/project2
+ENV FLASK_APP=flask_app
 
-COPY . .
+RUN mkdir /app
+COPY tween_m.pkl /app
+COPY flask_app.py /app
+COPY requirements.txt /app
 
-# RUN pip install --no-cache-dir -r requirements-prod.txt
+WORKDIR /app
+
+RUN pip install --no-cache-dir -r requirements.txt && python -m pip install --upgrade pip
 
 EXPOSE 5017
 
-CMD ["python", "-m", "flask", "run", "--host=127.0.0.1"]
+CMD ["flask", "run", "--host", "0.0.0.0","--port", "5017"]
+# RUN flask run --port 5017
+
