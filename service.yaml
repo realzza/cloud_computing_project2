@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: american-predictor-service
+  name: proj2-service
 spec:
   selector:
-    app: american-predictor
+    app: proj2-predictor
   ports:
     - protocol: TCP
       port: 5017

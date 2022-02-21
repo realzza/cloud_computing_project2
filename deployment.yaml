@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: american-predictor-deployment
+  name: proj2-deployment
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: american-predictor
+      app: proj2-predictor
   template:
     metadata:
       labels:
-        app: american-predictor
+        app: proj2-predictor
     spec:
       containers:
-      - name: american-predictor
+      - name: proj2-predictor
         image: ziangzhou/image-proj2:latest
         ports:
         - containerPort: 5017
