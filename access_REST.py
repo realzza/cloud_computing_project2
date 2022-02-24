@@ -17,6 +17,7 @@ def main():
     response = requests.post("http://%s:%s/api/american"%(args.ip, args.port), json={'text': args.data})
     with open(args.out,'w') as f:
         json.dump(response.json(), f)
+    print(response.status_code, response.reason)
     print(response.json())
 
 
