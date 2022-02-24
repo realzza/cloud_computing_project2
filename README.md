@@ -1,21 +1,21 @@
-# cloud_computing_project2
+# Cloud Computing Project 2
 
-### Train Code
+### 1. Train Code
 Training code and validation process are in the `train.ipynb` notebook.
 
-### Dockerfile
+### 2. Dockerfile
 Find the docker configuration to build container image in `Dockerfile`.
 
-### `yaml` for Kubernetes deployment
+### 3. `yaml` for Kubernetes deployment
 Find configuration for Kubernetes deployment in `deployment.yaml`
 
-### `yaml` for ArgoCD application, exported from ArgoCD's UI interface
+### 4. `yaml` for ArgoCD application, exported from ArgoCD's UI interface
 Find in `argoCD.yaml`.
 
-### client script to access my REST API
+### 5. client script to access my REST API
 Find client script in `access_REST.py`
 
-### PDF that analyzes the Rolling Update Strategy performed in ArgoCD
+### 6. PDF that analyzes the Rolling Update Strategy performed in ArgoCD
 See discussion in `Continuous Integration Discussion.pdf`
 
 <!-- ### Todo
