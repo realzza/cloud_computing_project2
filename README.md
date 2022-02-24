@@ -1,5 +1,20 @@
 # Cloud Computing Project 2
 
+## Scripts Usage
+Update docker image by making revisions to `docker_update.sh`
+```shell
+bash docker_update.sh
+```
+Run docker locally
+```shell
+bash docker_run.sh
+```
+Deploy Kubernetes
+```shell
+bash kub_deployment.sh
+```
+
+## Project Checklist
 ### 1. Train Code
 Training code and validation process are in the `train.ipynb` notebook.
 
@@ -17,6 +32,7 @@ Find client script in `access_REST.py`
 
 ### 6. PDF that analyzes the Rolling Update Strategy performed in ArgoCD
 See discussion in `Continuous Integration Discussion.pdf`
+
 
 <!-- ### Todo
 - [x] copy data to local
