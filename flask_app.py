@@ -1,4 +1,5 @@
 from flask import Flask
+import urllib.request
 import pickle
 import numpy as np
 import pandas as pd
@@ -9,8 +10,10 @@ from sklearn.feature_extraction.text import TfidfTransformer
 
 # prediction function
 def ValuePredictor(to_predict_list):
+    # download model
+    urllib.request.urlretrieve("https://raw.githubusercontent.com/realzza/cloud_computing_project2/master/tween_m.pkl", "tweet_model.pkl")
     # tokenizing    
-    models = pickle.load(open("tween_m.pkl", "rb"))
+    models = pickle.load(open("tweet_model.pkl", "rb"))
     countVect = models[0]
     tfidf_trans = models[1]
     clf = models[2]
@@ -28,10 +31,10 @@ def result():
         request_pred = ValuePredictor(list(request_dict.values()))
         print(request_pred)
         if request_pred == 0:
-            return {"is_american":"I am not from the US"}
+            return {"is_american": 0, "version": "0.2.2", "model_date": "2022-02-24"}
         else:
-            return {"is_american":"I am from the US"}
+            return {"is_american": 1, "version": "0.2.2", "model_date": "2022-02-24"}
     
     else:
-        return "fuck you"
+        return "hi"
         
