@@ -1,0 +1,9 @@
+project: zz188-project
+source:
+  repoURL: 'https://github.com/realzza/cloud_computing_project2'
+  path: .
+destination:
+  server: 'https://kubernetes.default.svc'
+  namespace: zz188
+syncPolicy:
+  automated: {}
