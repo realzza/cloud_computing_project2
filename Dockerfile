@@ -3,8 +3,7 @@ FROM python:3.7-slim
 ENV FLASK_APP=flask_app
 
 RUN mkdir /app
-# COPY tween_m.pkl /app
-ADD https://github.com/realzza/cloud_computing_project2/blob/master/tween_m.pkl /app
+
 COPY flask_app.py /app
 COPY requirements.txt /app
 
